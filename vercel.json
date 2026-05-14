@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/mcp.py": {
+      "includeFiles": "{server.py,myDatasauRus.csv}"
+    }
+  },
+  "rewrites": [
+    { "source": "/mcp", "destination": "/api/mcp" },
+    { "source": "/mcp/(.*)", "destination": "/api/mcp/$1" }
+  ]
+}
