@@ -88,4 +88,12 @@ def get_dataset_summary(dataset: str | None = None) -> dict[str, Any]:
     }
 
 
-app = mcp.http_app(path="/")
+_starlette_app = mcp.http_app(path="/")
+
+
+async def app(scope, receive, send):
+    """ASGI wrapper. Vercel's runtime may not detect Starlette class
+    instances as ASGI apps, so forward all events through a plain async
+    function it can recognize."""
+    await _starlette_app(scope, receive, send)
+
