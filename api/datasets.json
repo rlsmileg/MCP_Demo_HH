@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "name": "away",
+      "count": 142,
+      "url": "datasets/away.json"
+    },
+    {
+      "name": "bullseye",
+      "count": 142,
+      "url": "datasets/bullseye.json"
+    },
+    {
+      "name": "dino",
+      "count": 142,
+      "url": "datasets/dino.json"
+    },
+    {
+      "name": "star",
+      "count": 142,
+      "url": "datasets/star.json"
+    }
+  ]
+}
