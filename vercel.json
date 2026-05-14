@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/mcp.py": {
-      "includeFiles": "{server.py,myDatasauRus.csv}"
+      "includeFiles": "*"
     }
   },
   "rewrites": [
