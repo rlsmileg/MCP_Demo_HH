@@ -1,4 +1,4 @@
-# DatasauRus API
+# DatasauRus API and MCP Server
 
 This project publishes `myDatasauRus.csv` as static JSON files that can be hosted on GitHub Pages.
 
@@ -38,3 +38,27 @@ node scripts/build-api.mjs
 ```
 
 Then commit the generated `api/` files and enable GitHub Pages for the repository.
+
+## MCP server
+
+This repo also includes a FastMCP server for deployment on FastMCP Cloud.
+
+FastMCP Cloud entrypoint:
+
+```text
+server.py:mcp
+```
+
+Available MCP tools:
+
+- `list_datasets`: list dataset names and point counts
+- `get_dataset_points`: get all `x` and `y` points for a dataset name
+- `get_dataset_summary`: get count and x/y bounds for one dataset or all datasets
+
+Local MCP development:
+
+```bash
+pip install -r requirements.txt
+fastmcp inspect server.py:mcp
+fastmcp run server.py:mcp
+```
